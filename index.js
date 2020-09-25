@@ -6,6 +6,7 @@ const app = express();
 app.use(cors());
 
 app.use("/", express.static("build"));
+app.get("/", express.static("build"));
 //app.use("/*", express.static("build"));
 
 app.listen(process.env.PORT || 3001, () => {
