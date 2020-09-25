@@ -1,0 +1,37 @@
+{
+  "name": "start",
+  "version": "1.0.0",
+  "description": "Save your list of tasks in your phone and start",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf build && cd Front && npm install && npm run build --prod && cp -r build ..",
+    "deploy": "git push heroku master",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
+    "logs:prod": "heroku logs --tail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SubroBlack/start.git"
+  },
+  "keywords": [
+    "Stuff"
+  ],
+  "author": "SubroBlack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SubroBlack/start/issues"
+  },
+  "homepage": "https://github.com/SubroBlack/start#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
