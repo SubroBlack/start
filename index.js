@@ -5,8 +5,11 @@ const app = express();
 
 app.use(cors());
 
-app.use("/", express.static("build"));
+app.use("/app", express.static("build"));
 app.get("/", express.static("build"));
+app.get("/trial", (req, res) => {
+  res.send("Start Now");
+});
 //app.use("/*", express.static("build"));
 
 app.listen(process.env.PORT || 3001, () => {
