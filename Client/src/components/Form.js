@@ -4,11 +4,27 @@ import { v4 as uuid } from "uuid";
 import "./layout/Form.css";
 
 const Form = (props) => {
+  const today = new Date();
   const [title, setTitle] = useState("");
-  const [deadline, setDeadline] = useState("2099-05-31");
+  const [deadline, setDeadline] = useState(
+    `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`
+  );
   const [importance, setImportance] = useState("Important");
   const [status, setStatus] = useState("To Do");
   const [description, setDescription] = useState("");
+
+  //Date
+  /*
+  console.log(
+    "The Deadline: ",
+    today.getDate(),
+    today.getMonth() + 1,
+    today.getFullYear()
+  );
+  setDeadline(
+    `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`
+  );
+  */
 
   const detailStyle = () => {
     return {
@@ -86,7 +102,7 @@ const Form = (props) => {
         </div>
         <br />
         <div className="formInput">
-          <label for="deadline">
+          <label>
             <b>Deadline: </b>
           </label>
           <input
