@@ -1,0 +1,90 @@
+.editPanel {
+  margin: 0;
+}
+
+.formInput {
+  width: 90%;
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+}
+
+.titleStyle {
+}
+
+.heads {
+  width: 35%;
+  margin-right: auto;
+  padding-left: 5%;
+  text-align: right;
+  font-weight: bold;
+}
+
+.info {
+  width: 40%;
+  margin-left: auto;
+  padding-right: 10%;
+  text-align: left;
+}
+
+.btnGroup {
+  display: flex;
+  width: "80%";
+  max-width: "80%";
+  margin: auto;
+  margin-top: 1%;
+  font-weight: bold;
+  font-size: 90%;
+  color: white;
+}
+
+.btn {
+  margin: auto;
+  background: lightblue;
+  color: white;
+  border: solid 1px;
+  border-radius: 3%;
+  border-color: rgb(0, 0, 0);
+  box-shadow: 1px 2px rgb(235, 236, 237);
+}
+
+.btn:hover {
+  margin: auto;
+  background-color: rgb(40, 44, 52);
+  color: white;
+  border: solid 2px;
+  border-radius: 3%;
+  border-color: rgb(0, 0, 0);
+  box-shadow: 3px 4px rgb(235, 236, 237);
+}
+
+.btnSelected {
+  margin: auto;
+  background: rgb(35, 38, 42);
+  color: rgb(40, 201, 250);
+  border: solid 2px;
+  border-radius: 3%;
+  border-color: rgb(0, 0, 0);
+  box-shadow: 1px 2px rgb(235, 236, 237);
+}
+
+.fullBtn {
+  width: 90%;
+  max-width: 90%;
+  margin: auto;
+  background: rgba(250, 57, 40, 0.95);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.5%;
+  border: solid 1px;
+  border-radius: 3%;
+  border-color: rgb(0, 0, 0);
+  box-shadow: 1px 2px rgb(235, 236, 237);
+}
