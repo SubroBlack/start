@@ -13,6 +13,9 @@ const impBarStyle = {
   borderRadius: "3%",
   borderColor: "rgb(0, 0, 0)",
   boxShadow: "1px 2px rgb(235, 236, 237)",
+  position: -"webkit-sticky",
+  position: "sticky",
+  top: "1%",
 };
 
 const barItems = {
