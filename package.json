@@ -7,10 +7,10 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf build && cd Client && yarn install && yarn run build --prod && cp -r build ..",
+    "build:ui": "rm -rf build && cd Client && npm install && npm run build --prod && cp -r build ..",
     "save": "git add . && git commit -m AppUpdate && git push heroku master",
     "deploy": "git push heroku master",
-    "deploy:full": "yarn run build:ui && git add . && git commit -m uibuild && yarn run deploy",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs --tail"
   },
   "repository": {
