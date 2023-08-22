@@ -15,7 +15,7 @@ RUN npm install
 COPY . .
 
 # Compile and build the app
-#RUN npm run build
+RUN npm run build
 
 # Uses port which is used by the actual application
 EXPOSE 3000
