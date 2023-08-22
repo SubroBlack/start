@@ -18,7 +18,7 @@ COPY . .
 #RUN npm run build
 
 # Uses port which is used by the actual application
-EXPOSE 3000
+EXPOSE 3001
 
 # Command to be run after the image is ready to start it
 CMD ["npm", "start"]
