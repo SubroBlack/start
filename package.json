@@ -1,4 +1,7 @@
 {
+  "engines": { 
+    "node": "16.19.1" 
+  },
   "name": "start",
   "version": "1.0.0",
   "description": "Save your list of tasks in your phone and start",
@@ -8,10 +11,7 @@
     "dev": "nodemon index.js",
     "test": "echo \"No test specified, if there was then it would have run \"",
     "build:ui": "rm -rf build && cd Client && npm install && npm run build --prod && cp -r build ..",
-    "save": "git add . && git commit -m AppUpdate && git push heroku master",
-    "deploy": "git push heroku master",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "save": "git add . && git commit -m AppUpdate && git push"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,8 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "http": "0.0.1-security"
+    "http": "0.0.1-security",
+    "webpack": "^4.43.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
