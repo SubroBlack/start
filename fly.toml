@@ -4,11 +4,11 @@ app = "start"
 primary_region = "ams"
 
 
-[deploy]
-  release_command = "npm run build"
+#[deploy]
+#  release_command = "npm run build"
 
 [processes]
-  app = "node app.js"
+  app = "node index.js"
 
 [build]
   [build.args]
