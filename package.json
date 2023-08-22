@@ -1,6 +1,6 @@
 {
-  "engines": { 
-    "node": "16.19.1" 
+  "engines": {
+    "node": "16.19.1"
   },
   "name": "start",
   "version": "1.0.0",
@@ -9,7 +9,6 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build": "npm build .",
     "test": "echo \"No test specified, if there was then it would have run \"",
     "build:ui": "rm -rf build && cd Client && npm install && npm run build --prod && cp -r build ..",
     "save": "git add . && git commit -m AppUpdate && git push"
