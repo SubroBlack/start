@@ -1,0 +1,27 @@
+name: Azure Deploy
+on:
+  push:
+    branches:
+      - master
+
+env:
+#  NODE_VERSION: '16.19'                # set this to the node version to use
+
+jobs:
+  deploy:
+    name: Deploy app
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log in to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+
+      - name: Build and deploy Container App
+        uses: azure/container-apps-deploy-action@v1
+        with:
+          appSourcePath: ${{ github.workspace }}/
+          acrName: startapp
+          #          containerAppName: my-container-app
+          resourceGroup: trial-rg
+          dockerfilePath: Dockerfile
