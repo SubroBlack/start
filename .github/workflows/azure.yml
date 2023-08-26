@@ -20,6 +20,6 @@ jobs:
         with:
           appSourcePath: ${{ github.workspace }}/
           acrName: startapp
-          #          containerAppName: my-container-app
+          containerAppName: subro-to-do
           resourceGroup: trial-rg
           dockerfilePath: Dockerfile
