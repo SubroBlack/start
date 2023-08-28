@@ -36,5 +36,5 @@ jobs:
           #memory: 0.1   #Optional
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-          name: trial-rg-startapp-container
+          name: startapp-container
           location: "north europe"
