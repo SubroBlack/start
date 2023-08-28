@@ -21,4 +21,4 @@ jobs:
           appSourcePath: ${{ github.workspace }}/
           acrName: startapp
           resourceGroup: trial-rg
-#          dockerfilePath: Dockerfile
+          dockerfilePath: Dockerfile
