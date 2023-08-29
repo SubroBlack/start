@@ -14,7 +14,7 @@ const impBarStyle = {
   borderColor: "rgb(0, 0, 0)",
   boxShadow: "1px 2px rgb(235, 236, 237)",
   position: -"webkit-sticky",
-  position: "sticky",
+  //position: "sticky",
   top: "1%",
 };
 
