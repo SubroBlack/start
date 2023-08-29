@@ -18,7 +18,7 @@ COPY . .
 RUN yarn build
 
 # Uses port which is used by the actual application
-EXPOSE 3000
+EXPOSE 80
 
 # Command to be run after the image is ready to start it
 CMD ["yarn", "start"]
