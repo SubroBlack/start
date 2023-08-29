@@ -1,39 +1,31 @@
 {
-  "engines": {
-    "node": "16.19.1"
-  },
-  "name": "start",
-  "version": "1.0.0",
-  "description": "Save your list of tasks in your phone and start",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "echo \"No test specified, if there was then it would have run \"",
-    "build:ui": "rm -rf build && cd Client && npm install && npm run build --prod && cp -r build ..",
-    "save": "git add . && git commit -m AppUpdate && git push"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SubroBlack/start.git"
-  },
-  "keywords": [
-    "Stuff"
-  ],
-  "author": "SubroBlack",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SubroBlack/start/issues"
-  },
-  "homepage": "https://github.com/SubroBlack/start#readme",
+  "name": "todo",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "http": "0.0.1-security",
-    "webpack": "^4.43.0"
+    "axios": "^0.18.1",
+    "json-server": "^0.16.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "2.1.8",
+    "uuid": "^3.4.0"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  }
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "json-server -p3001 --watch db.json"
+  },
+  "proxy": "http://localhost:3001",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
