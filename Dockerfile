@@ -6,19 +6,19 @@ WORKDIR '/app'
 
 # Copying the package json files 
 COPY package.json package.json
-#COPY package-lock.json package-lock.json
+COPY yarn.lock yarn.lock
 
 # Install some depenendencies
-RUN npm install 
+RUN yarn install 
 
 # Copy the rest of the src files
 COPY . .
 
 # Compile and build the app
-#RUN npm run build
+RUN yarn build
 
 # Uses port which is used by the actual application
-EXPOSE 3001
+EXPOSE 80
 
 # Command to be run after the image is ready to start it
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
